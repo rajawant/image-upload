@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Image Upload</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="./app.js"></script>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body ng-controller="ImgCtrl">
+	<h3 class="well" align="center" >Image Upload</h3><br>
+
+<!-- Custom Directive -->
+	<div img-directive></div>
+
+	<hr>
+	<div class="img-wrap" ng-show="message">
+		<img ng-src="images/{{item.image}}" alt="" width="250" height="250" ng-if="show">
+		<span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="closeImage()" ng-if="show"></span>
+	</div>
+	<br>
+	<div ng-show="message">
+		<div ng-class="alert" ng-if="show">{{message}}</div>
+	</div>
+	<br>
+
+	<button ng-click="getImages()" class="btn btn-success">Show Images</button>
+	
+	<hr>
+	<div ng-repeat="imgObj in imageList" class="img-wrap">
+		<img ng-src="images/{{imgObj.image}}" alt="" width="150" height="150">
+		
+	</div>
+
+</body>
+</html>

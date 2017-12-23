@@ -1,0 +1,22 @@
+.img-wrap{
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+}
+.close {
+	border: 2px solid red;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 1;
+  background: red;
+}
+
+span.glyphicon{
+    color: white;
+    position: absolute;
+    background: red;
+    top: 0px;
+    right: 0px;
+    border: 2px solid red;
+}
