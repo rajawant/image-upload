@@ -10,7 +10,7 @@ app.controller('ImgCtrl', ['$scope','$http', function ($scope,$http) {
 			var file= $('#file')[0].files[0]; //reading image object
 			
 			// validating supported format
-			if(!(file.name.match(/\.(png||jpeg)$/))){
+			if(!(file.name.match(/\.(png||jpg||jpeg)$/))){
 				$scope.alert="alert alert-danger";
 				$scope.message= "Invalid format. only .png/.jpg./jpeg format are supported";
 				console.log("Invalid file format");
